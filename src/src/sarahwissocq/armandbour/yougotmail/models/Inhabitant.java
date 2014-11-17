@@ -1,5 +1,7 @@
 package src.sarahwissocq.armandbour.yougotmail.models;
 
+import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
+
 /**
  * Represent the inhabitant in the city.
  * @author Armand BOUR
@@ -14,33 +16,43 @@ public class Inhabitant {
 	private City city;
 	
 	/* the bank account of the inhabitant */
-	private float bankAccount;
+	private BankAccount bankAccount;
 	
 	/**
-	 * Constructor for the class Inhabitant
-	 * @param name the name of the inhabitant
-	 * @param city the city of the inhabitant
-	 * @param bankAccount the bank account of the inhabitant
+	 * Constructor for the class Inhabitant.
+	 * @param name the name of the inhabitant.
+	 * @param city the city of the inhabitant.
+	 * @param bankAccount the bank account of the inhabitant.
 	 */
-	public Inhabitant(String name, City city, float bankAccount){
+	public Inhabitant(String name, City city, BankAccount bankAccount){
 		this.name=name;
 		this.city=city;
 		this.bankAccount=bankAccount;
 	}
 	
 	/**
-	 * The inhabitant receive his letter
-	 * @return the letter that the inhabitant have received
+	 * The inhabitant receive his letter l.
+	 * Activate the action of the letter l.
+	 * @param l letter the inhabitant received
 	 */
-	public Mail receiveLetter(Mail l){
-		
+	public void receiveLetter(Mail<Content> l){
+		l.action();
 	}
 	
 	/**
-	 * The inhabitant post his letter and pay the cost of a letter
-	 * @param l the letter that the inhabitant want to post
+	 * The inhabitant post his letter and pay the cost of a letter.
+	 * @param l the letter that the inhabitant want to post.
 	 */
-	public void postLetter(Mail l){
-		
+	public void postLetter(Mail<Content> l){
+		this.bankAccount.withdraw(l.getCost());
+		this.city.sendLetter(l);
+	}
+	
+	/**
+	 * Return the name of the inhabitant.
+	 * @return the name of the inhabitant.
+	 */
+	public String getName(){
+		return this.name;
 	}
 }
