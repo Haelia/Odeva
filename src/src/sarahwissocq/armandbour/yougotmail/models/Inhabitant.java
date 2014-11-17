@@ -1,7 +1,7 @@
 package src.sarahwissocq.armandbour.yougotmail.models;
 
 /**
- * Represent the inhabitant 
+ * Represent the inhabitant in the city.
  * @author Armand BOUR
  * @author Sarah WISSOCQ
  */
