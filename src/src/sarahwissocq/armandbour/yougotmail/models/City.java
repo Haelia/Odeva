@@ -15,7 +15,7 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
 public class City {
 
 	/** The name of the city. */
-	private String name;
+	private final String name;
 	
 	/** The list of inhabitants living in the city. */
 	private final List<Inhabitant> inhabitants;
@@ -27,5 +27,54 @@ public class City {
 		this.name = name;
 		this.inhabitants = new ArrayList<Inhabitant>();
 		this.mailbox = new ArrayList<Mail<?>>();
+	}
+	
+	/**
+	 * Adds some {@link Mail} to the mailbox of the city.
+	 * @param mail The mail to add.
+	 */
+	public void sendLetter(Mail<?> mail) {
+		this.mailbox.add(mail);
+	}
+	
+	/**
+	 * Sends all the mail contained in the mailbox to all receivers.
+	 */
+	public void distributeMail() {
+		// Empty mailbox into postman's bag
+		List<Mail<?>> postmanBag = new ArrayList<Mail<?>>(this.mailbox);
+		this.mailbox.removeAll(null);
+		
+		// Post all letters to each inhabitants
+		for(Mail<?> m : postmanBag) {
+			m.getReceiver().receiveMail(m);
+		}
+	}
+	
+	/**
+	 * Adds a inhabitant to the city.
+	 * @param inhabitant The inhabitant to add.
+	 */
+	public void addInhabitant(Inhabitant inhabitant) {
+		if(!this.inhabitants.contains(inhabitant))
+			this.inhabitants.add(inhabitant);
+	}
+	
+	/**
+	 * Removes a inhabitant from the city. 
+	 * @param inhabitant The inhabitant to remove.
+	 * @return <code>true</code> if the inhabitant was successfully removed ; <br>
+	 * 			<code>false</code> if it does not exist in the city.
+	 */
+	public boolean removeInhabitant(Inhabitant inhabitant) {
+		return this.inhabitants.remove(inhabitant);
+	}
+	
+	/**
+	 * Gets the name of the city.
+	 * @return The name of the city.
+	 */
+	public String getName() {
+		return name;
 	}
 }
