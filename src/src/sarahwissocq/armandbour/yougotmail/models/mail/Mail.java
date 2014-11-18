@@ -1,6 +1,5 @@
 package src.sarahwissocq.armandbour.yougotmail.models.mail;
 
-import src.sarahwissocq.armandbour.yougotmail.models.Content;
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
 
 /**

@@ -6,8 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import src.sarahwissocq.armandbour.yougotmail.models.City;
-import src.sarahwissocq.armandbour.yougotmail.models.Content;
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
+import src.sarahwissocq.armandbour.yougotmail.models.mail.Content;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Letter;
 
 

@@ -33,7 +33,7 @@ public class City {
 	 * Adds some {@link Mail} to the mailbox of the city.
 	 * @param mail The mail to add.
 	 */
-	public void sendLetter(Mail<?> mail) {
+	public void post(Mail<?> mail) {
 		this.mailbox.add(mail);
 	}
 	
@@ -68,6 +68,18 @@ public class City {
 	 */
 	public boolean removeInhabitant(Inhabitant inhabitant) {
 		return this.inhabitants.remove(inhabitant);
+	}
+	
+	/**
+	 * Gets a list containing all the inhabitants.
+	 * @return A new list containing all the inhabitants.
+	 */
+	public List<Inhabitant> getAllInhabitants() {
+		return new ArrayList<Inhabitant>(this.inhabitants);
+	}
+	
+	public Inhabitant getInhabitant(int index) {
+		return this.inhabitants.get(index);
 	}
 	
 	/**

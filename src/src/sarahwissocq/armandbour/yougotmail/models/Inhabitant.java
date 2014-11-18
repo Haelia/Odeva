@@ -25,9 +25,9 @@ public class Inhabitant {
 	 * @param bankAccount The bank account of the inhabitant.
 	 */
 	public Inhabitant(String name, City city){
-		this.name=name;
-		this.city=city;
-		this.bankAccount=new BankAccount(0);
+		this.name = name;
+		this.city = city;
+		this.bankAccount = new BankAccount(0);
 	}
 	
 	/**
@@ -40,12 +40,12 @@ public class Inhabitant {
 	}
 	
 	/**
-	 * The inhabitant post his letter and pays the cost of a letter.
+	 * The inhabitant posts his letter and pays the cost of a letter.
 	 * @param l the letter that the inhabitant wants to post.
 	 */
 	public void postMail(Mail<?> l){
 		this.bankAccount.withdraw(l.getCost());
-		this.city.sendLetter(l);
+		this.city.post(l);
 	}
 	
 	/**
@@ -55,4 +55,40 @@ public class Inhabitant {
 	public String getName(){
 		return this.name;
 	}
+	/**
+	 * Gets the inhabitant's bank account.
+	 * @return The inhabitant's bank account.
+	 */
+	public BankAccount getBankAccount() {
+		return bankAccount;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Inhabitant other = (Inhabitant) obj;
+		if (bankAccount == null) {
+			if (other.bankAccount != null)
+				return false;
+		} else if (!bankAccount.equals(other.bankAccount))
+			return false;
+		if (city == null) {
+			if (other.city != null)
+				return false;
+		} else if (!city.equals(other.city))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
+	
 }

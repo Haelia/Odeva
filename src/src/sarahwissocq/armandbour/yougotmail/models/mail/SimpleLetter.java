@@ -1,7 +1,6 @@
 package src.sarahwissocq.armandbour.yougotmail.models.mail;
 
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
-import src.sarahwissocq.armandbour.yougotmail.models.Text;
 
 /**
  * @author Armand BOUR
@@ -23,7 +22,7 @@ public class SimpleLetter extends Letter<Text> {
 
 	@Override
 	public void action() {
-		this.content.getMessage();
+		this.content.get();
 
 	}
 

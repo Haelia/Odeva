@@ -8,7 +8,7 @@ package src.sarahwissocq.armandbour.yougotmail.models;
  */
 public class BankAccount {
 
-	/** the amount of the bank account */
+	/** The current balance of the bank account */
 	private float amount;
 
 	public BankAccount(float f) {
@@ -16,27 +16,25 @@ public class BankAccount {
 	}
 
 	/**
-	 * Add the amount f on the bank account.
+	 * Adds the amount f to the bank account.
 	 * 
-	 * @param f
-	 *            the amount
+	 * @param f The amount
 	 */
 	public void credit(float f) {
 		this.amount = this.amount + f;
 	}
 
 	/**
-	 * Remove the amount f on the bank account.
+	 * Removes the amount f from the bank account.
 	 * 
-	 * @param f
-	 *            the amount
+	 * @param f The amount
 	 */
 	public void withdraw(float f) {
 		this.amount = this.amount - f;
 	}
 
 	/**
-	 * Return the amount.
+	 * Returns the amount.
 	 * 
 	 * @return the amount.
 	 */

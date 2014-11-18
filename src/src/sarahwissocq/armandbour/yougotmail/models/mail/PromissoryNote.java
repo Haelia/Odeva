@@ -1,8 +1,6 @@
 package src.sarahwissocq.armandbour.yougotmail.models.mail;
 
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
-import src.sarahwissocq.armandbour.yougotmail.models.Money;
-import src.sarahwissocq.armandbour.yougotmail.models.Text;
 
 /**
  * When the sender send a promissory note, he send an amount that is withdraw
@@ -19,13 +17,13 @@ public class PromissoryNote extends Letter<Money> {
 
 	@Override
 	public float getCost() {
-		return 1 + (this.content.getAmount() / 100);
+		return 1 + (this.content.get() / 100);
 	}
 
 	@Override
 	public void action() {
-		this.sender.getBankAccount().withdraw(this.getContent().getAmount());
-		this.receiver.getBankAccount().credit(this.getContent().getAmount());
+		this.sender.getBankAccount().withdraw(this.getContent().get());
+		this.receiver.getBankAccount().credit(this.getContent().get());
 		Text msg = new Text("Thank You !");
 		SimpleLetter l = new SimpleLetter(this.receiver, this.sender, msg);
 		this.receiver.postMail(l);
