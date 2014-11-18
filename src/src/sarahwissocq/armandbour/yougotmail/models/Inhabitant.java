@@ -24,10 +24,10 @@ public class Inhabitant {
 	 * @param city the city of the inhabitant.
 	 * @param bankAccount the bank account of the inhabitant.
 	 */
-	public Inhabitant(String name, City city, BankAccount bankAccount){
+	public Inhabitant(String name, City city){
 		this.name=name;
 		this.city=city;
-		this.bankAccount=bankAccount;
+		this.bankAccount=new BankAccount(0);
 	}
 	
 	/**
