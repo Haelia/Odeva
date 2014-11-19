@@ -37,25 +37,33 @@ public class CityTest {
 	}
 	
 	private City city;
+	private Inhabitant armand;
+	private Inhabitant sarah;
 	
 	@Before
 	public void initialiseFields() {
 		this.city = new City("ChocoLicorneCity");
 		
-		this.city.addInhabitant(new Inhabitant("Armand Bour", city));
-		this.city.addInhabitant(new Inhabitant("Sarah Wissocq", city));
+		this.armand = new Inhabitant("Armand Bour", city);
+		this.sarah = new Inhabitant("Sarah Wissocq", city); 
+		this.city.addInhabitant(armand);
+		this.city.addInhabitant(sarah);
+	}
+	
+	@Test
+	public void testPostMail() {
+		assertEquals(0, this.city.getNumberOfLettersInMailbox());
+		armand.postMail(new EasyMoneyLetter(armand, sarah));
+		assertEquals(1, this.city.getNumberOfLettersInMailbox());
 	}
 	
 	@Test
 	public void testDistributeMail() {
-		// Credit money to Armand
-		Inhabitant armand = this.city.getInhabitant(0);
-		Inhabitant sarah = this.city.getInhabitant(1);
 		armand.postMail(new EasyMoneyLetter(armand, sarah));
 		
 		this.city.distributeMail();
 		
-		assertEquals(1000, sarah.getBankAccount().getAmount(), 0.009);
-		assertEquals(-10, armand.getBankAccount().getAmount(), 0.009);
+		assertEquals(2000, sarah.getBankAccount().getAmount(), 0.009);
+		assertEquals(1990, armand.getBankAccount().getAmount(), 0.009);
 	}
 }

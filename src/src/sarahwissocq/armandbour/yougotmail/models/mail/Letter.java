@@ -9,7 +9,7 @@ import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
  * @param <T>
  *            The Content of the Letter.
  */
-public abstract class Letter<T extends Content> implements Mail<T> {
+public abstract class Letter<T extends Content> implements Mail<T>, Content {
 
 	/** Content of the letter */
 	protected T content;
@@ -55,5 +55,10 @@ public abstract class Letter<T extends Content> implements Mail<T> {
 	 */
 	public T getContent() {
 		return this.content;
+	}
+
+	@Override
+	public Letter<T> get() {
+		return this;
 	}
 }
