@@ -1,5 +1,7 @@
 package test.sarahwissocq.armandbour.yougotmail.models.mail;
 
+import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +13,7 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.Money;
 public class CityTest {
 	
 	/**
-	 * Dummy letter to credit money to the receive.
+	 * Dummy letter to credit money to the receiver.
 	 * @author Armand BOUR
 	 * @author Sarah WISSOCQ
 	 *
@@ -19,7 +21,7 @@ public class CityTest {
 	private class EasyMoneyLetter extends Letter<Money>{
 
 		public EasyMoneyLetter(Inhabitant sender, Inhabitant receiver) {
-			super(sender, receiver, null);
+			super(sender, receiver, new Money(1000));
 		}
 
 		@Override
@@ -29,7 +31,7 @@ public class CityTest {
 
 		@Override
 		public void action() {
-			this.receiver.getBankAccount().credit(1000);
+			this.receiver.getBankAccount().credit(content.get());
 		}
 		
 	}
@@ -42,13 +44,18 @@ public class CityTest {
 		
 		this.city.addInhabitant(new Inhabitant("Armand Bour", city));
 		this.city.addInhabitant(new Inhabitant("Sarah Wissocq", city));
-		
 	}
 	
 	@Test
 	public void testDistributeMail() {
-		this.city.post(new EasyMoneyLetter(this.city.getInhabitant(0),
-				this.city.getInhabitant(1)));
+		// Credit money to Armand
+		Inhabitant armand = this.city.getInhabitant(0);
+		Inhabitant sarah = this.city.getInhabitant(1);
+		armand.postMail(new EasyMoneyLetter(armand, sarah));
 		
+		this.city.distributeMail();
+		
+		assertEquals(1000, sarah.getBankAccount().getAmount(), 0.009);
+		assertEquals(-10, armand.getBankAccount().getAmount(), 0.009);
 	}
 }

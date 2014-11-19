@@ -20,7 +20,9 @@ public abstract class Letter<T extends Content> implements Mail<T> {
 	protected Inhabitant receiver;
 
 	public Letter(Inhabitant sender, Inhabitant receiver, T content) {
-
+		this.sender = sender;
+		this.receiver = receiver;
+		this.content = content;
 	}
 
 	/**

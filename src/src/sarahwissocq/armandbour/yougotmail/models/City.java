@@ -33,7 +33,7 @@ public class City {
 	 * Adds some {@link Mail} to the mailbox of the city.
 	 * @param mail The mail to add.
 	 */
-	public void post(Mail<?> mail) {
+	protected void post(Mail<?> mail) {
 		this.mailbox.add(mail);
 	}
 	
@@ -43,7 +43,7 @@ public class City {
 	public void distributeMail() {
 		// Empty mailbox into postman's bag
 		List<Mail<?>> postmanBag = new ArrayList<Mail<?>>(this.mailbox);
-		this.mailbox.removeAll(null);
+		this.mailbox.clear();
 		
 		// Post all letters to each inhabitants
 		for(Mail<?> m : postmanBag) {
