@@ -3,26 +3,28 @@ package test.sarahwissocq.armandbour.yougotmail.models.mail;
 import src.sarahwissocq.armandbour.yougotmail.models.City;
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Letter;
-import src.sarahwissocq.armandbour.yougotmail.models.mail.SimpleLetter;
-import src.sarahwissocq.armandbour.yougotmail.models.mail.Text;
+import src.sarahwissocq.armandbour.yougotmail.models.mail.Money;
+import src.sarahwissocq.armandbour.yougotmail.models.mail.PromissoryNote;
 import static org.junit.Assert.*;
 
-public class SimpleLetterTest extends LetterTest<Text> {
+public class PromissoryNoteTest extends LetterTest<Money> {
 
 	@Override
-	protected Letter<Text> createLetter(Inhabitant i, Inhabitant in) {
-		Text t = new Text("test");
-		return new SimpleLetter(i, in, t);
+	protected Letter<Money> createLetter(Inhabitant i, Inhabitant in) {
+		Money m =new Money((float) 100);
+		return new PromissoryNote(i,in,m);
 	}
 
 	@Override
 	public void getCostTest() {
 		City c = new City("test");
-		Text t = new Text("test");
 		Inhabitant send = new Inhabitant("send", c);
 		Inhabitant rece = new Inhabitant("rece", c);
-		Letter<Text> l = new SimpleLetter(send, rece, t);
-		assertEquals(SimpleLetter.COST, l.getCost(), 0.1);
+		Money m =new Money((float) 100);
+		Letter<Money> l = new PromissoryNote(send,rece,m);
+		assertEquals( 2,l.getCost(),0.1);
 	}
+	
+	
 
 }

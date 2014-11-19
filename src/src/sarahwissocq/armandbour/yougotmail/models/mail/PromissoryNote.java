@@ -3,9 +3,10 @@ package src.sarahwissocq.armandbour.yougotmail.models.mail;
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
 
 /**
- * When the sender send a promissory note, he send an amount that is withdraw
- * of his bank account, he have to pay 1+1% of the amount he want to give.
- * Then the receiver send a simple letter to thanks the sender.
+ * When the sender send a promissory note, he send an amount that is withdraw of
+ * his bank account, he have to pay 1+1% of the amount he want to give. Then the
+ * receiver send a simple letter to thanks the sender.
+ * 
  * @author Armand BOUR
  * @author Sarah WISSOCQ
  */
