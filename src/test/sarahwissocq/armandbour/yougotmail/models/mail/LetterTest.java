@@ -34,11 +34,11 @@ public abstract class LetterTest<T extends Content> {
 	
 	@Test
 	public void getSenderTest(){
-		assertEquals(l.getSender(),in);
+		assertEquals(in,l.getSender());
 	}
 	
 	@Test
 	public void getReceiverTest(){
-		assertEquals(l.getSender(),ina);
+		assertEquals(ina,l.getReceiver());
 	}	
 }

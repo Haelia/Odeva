@@ -6,7 +6,8 @@ import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
  * @author Armand BOUR
  * @author Sarah WISSOCQ
  *
- * @param <T> The Content of the Letter.
+ * @param <T>
+ *            The Content of the Letter.
  */
 public abstract class Letter<T extends Content> implements Mail<T> {
 

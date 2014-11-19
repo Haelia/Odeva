@@ -9,7 +9,7 @@ import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
 public class SimpleLetter extends Letter<Text> {
 
 	/** Price of a simple letter */
-	public static final int COST = 1;
+	public static final float COST = 1;
 
 	public SimpleLetter(Inhabitant sender, Inhabitant receiver, Text content) {
 		super(sender, receiver, content);

@@ -27,7 +27,7 @@ public class Inhabitant {
 	public Inhabitant(String name, City city){
 		this.name = name;
 		this.city = city;
-		this.bankAccount = new BankAccount(0);
+		this.bankAccount = new BankAccount(1000);
 	}
 	
 	/**
@@ -55,6 +55,7 @@ public class Inhabitant {
 	public String getName(){
 		return this.name;
 	}
+	
 	/**
 	 * Gets the inhabitant's bank account.
 	 * @return The inhabitant's bank account.
@@ -62,6 +63,15 @@ public class Inhabitant {
 	public BankAccount getBankAccount() {
 		return bankAccount;
 	}
+	
+	/**
+	 * Gets the inhabitant's city.
+	 * @return The inhabitant's city.
+	 */
+	public City getCity(){
+		return city;
+	}
+	
 	
 	@Override
 	public boolean equals(Object obj) {
