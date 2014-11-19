@@ -78,8 +78,30 @@ public class City {
 		return new ArrayList<Inhabitant>(this.inhabitants);
 	}
 	
+	/**
+	 * Gets the inhabitant at the specified index.
+	 * @param index The index used to get the inhabitant in the list.
+	 * @return The inhabitant at the specified index.
+	 */
 	public Inhabitant getInhabitant(int index) {
 		return this.inhabitants.get(index);
+	}
+	
+	/**
+	 * Gets the letter at the specified index.
+	 * @param index The index of the letter to get.
+	 * @return The letter at the specified index.
+	 */
+	public Mail<?> getMail(int index) {
+		return this.mailbox.get(index);
+	}
+	
+	/**
+	 * Gets the number of letters contained in the public mailbox.
+	 * @return The number of letters.
+	 */
+	public int getNumberOfLettersInMailbox() {
+		return this.mailbox.size();
 	}
 	
 	/**
