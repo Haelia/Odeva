@@ -10,8 +10,8 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.Text;
 public class AcknowledgmentOfReceiptTest extends LetterTest<Text> {
 
 	@Override
-	protected Letter<Text> createLetter(Inhabitant i, Inhabitant in) {
-		return new AcknowledgmentOfReceipt(i, in);
+	protected Letter<Text> createLetter(Inhabitant sender, Inhabitant receiver) {
+		return new AcknowledgmentOfReceipt(sender, receiver);
 	}
 
 	@Override

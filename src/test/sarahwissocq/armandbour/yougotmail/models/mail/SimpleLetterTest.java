@@ -8,11 +8,11 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.Text;
 import static org.junit.Assert.*;
 
 public class SimpleLetterTest extends LetterTest<Text> {
-
+	
 	@Override
-	protected Letter<Text> createLetter(Inhabitant i, Inhabitant in) {
+	protected Letter<Text> createLetter(Inhabitant sender, Inhabitant receiver) {
 		Text t = new Text("test");
-		return new SimpleLetter(i, in, t);
+		return new SimpleLetter(sender, receiver, t);
 	}
 
 	@Override

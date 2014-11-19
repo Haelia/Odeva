@@ -10,7 +10,7 @@ package src.sarahwissocq.armandbour.yougotmail.models.mail;
 public abstract class DecorativeLetter extends Letter<Letter<?>> {
 
 	public DecorativeLetter(Letter<?> letter) {
-		super(letter.receiver, letter.sender, letter);
+		super(letter.sender, letter.receiver, letter);
 	}
 	
 	@Override

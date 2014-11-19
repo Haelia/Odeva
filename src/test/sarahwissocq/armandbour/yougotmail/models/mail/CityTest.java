@@ -64,6 +64,6 @@ public class CityTest {
 		this.city.distributeMail();
 		
 		assertEquals(2000, sarah.getBankAccount().getAmount(), 0.009);
-		assertEquals(1990, armand.getBankAccount().getAmount(), 0.009);
+		assertEquals(990, armand.getBankAccount().getAmount(), 0.009);
 	}
 }

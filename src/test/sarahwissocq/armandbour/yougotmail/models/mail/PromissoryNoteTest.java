@@ -10,9 +10,9 @@ import static org.junit.Assert.*;
 public class PromissoryNoteTest extends LetterTest<Money> {
 
 	@Override
-	protected Letter<Money> createLetter(Inhabitant i, Inhabitant in) {
+	protected Letter<Money> createLetter(Inhabitant sender, Inhabitant receiver) {
 		Money m =new Money((float) 100);
-		return new PromissoryNote(i,in,m);
+		return new PromissoryNote(sender,receiver,m);
 	}
 
 	@Override
