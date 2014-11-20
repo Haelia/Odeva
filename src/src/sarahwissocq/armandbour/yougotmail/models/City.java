@@ -52,12 +52,14 @@ public class City {
 	}
 	
 	/**
-	 * Adds a inhabitant to the city.
-	 * @param inhabitant The inhabitant to add.
+	 * Adds inhabitants to the city.
+	 * @param inhabitants The inhabitants to add.
 	 */
-	public void addInhabitant(Inhabitant inhabitant) {
-		if(!this.inhabitants.contains(inhabitant))
-			this.inhabitants.add(inhabitant);
+	public void addInhabitant(Inhabitant ... inhabitants) {
+		for(Inhabitant inh : inhabitants) {
+			if(!this.inhabitants.contains(inh))
+				this.inhabitants.add(inh);
+		}
 	}
 	
 	/**
@@ -102,6 +104,14 @@ public class City {
 	 */
 	public int getNumberOfLettersInMailbox() {
 		return this.mailbox.size();
+	}
+	
+	/**
+	 * Gets the number of inhabitants in the city.
+	 * @return The number of inhabitants in the city
+	 */
+	public int getNumberOfInhabitants() {
+		return this.inhabitants.size();
 	}
 	
 	/**
