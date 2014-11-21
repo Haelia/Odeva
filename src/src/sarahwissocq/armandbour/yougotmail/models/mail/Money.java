@@ -20,4 +20,8 @@ public class Money implements Content {
 		return this.amount;
 	}
 
+	@Override
+	public String toString() {
+		return "a money content (" + String.valueOf(this.amount) + ")";
+	}
 }

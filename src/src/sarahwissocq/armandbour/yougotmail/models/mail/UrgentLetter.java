@@ -16,4 +16,9 @@ public class UrgentLetter extends DecorativeLetter {
 	public float getCost() {
 		return super.getCost() * 2;
 	}
+	
+	@Override
+	public String toString() {
+		return "an urgent letter whose content is " + this.content.toString();
+	}
 }

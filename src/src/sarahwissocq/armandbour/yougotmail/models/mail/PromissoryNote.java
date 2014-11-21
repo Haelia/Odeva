@@ -30,4 +30,8 @@ public class PromissoryNote extends Letter<Money> {
 		this.receiver.postMail(l);
 	}
 
+	@Override
+	public String toString() {
+		return "a promissory note whose content is " + this.content.toString();
+	}
 }

@@ -24,4 +24,8 @@ public class AcknowledgmentOfReceipt extends Letter<Text>{
 		this.content.get();		
 	}
 
+	@Override
+	public String toString() {
+		return "an ackowledgement of receipt whose content is " + this.content.toString();
+	}
 }

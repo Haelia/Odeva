@@ -12,13 +12,16 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.RegisteredLetter;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.SimpleLetter;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Text;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.UrgentLetter;
+import src.sarahwissocq.armandbour.yougotmail.ui.UIConsole;
 
 public class Main {
 
 	private static Random random;
+	private static PrintWriter printer;
 	
 	static {
 		random = new Random();
+		printer = new PrintWriter(System.out);
 	}
 	
 	/**
@@ -32,7 +35,7 @@ public class Main {
 		String value;
 		
 		for (int i = 0; i < inhabitants.length; i++) {
-			value = String.valueOf(number);
+			value = String.valueOf(i);
 			// Generate a name under the form "Inhabitant-022"
 			inhabitants[i] = new Inhabitant("Inhabitant-" +
 					("0000" + value).substring(value.length()), city);
@@ -47,8 +50,10 @@ public class Main {
 	}
 	
 	public static void simulateOneDay(int day, City city) {
-		PrintWriter print = new PrintWriter(System.out);
-		print.printf("******************** Day %d************************\n", day);
+		printer.printf("************************ Day %d ************************\n", day);
+		
+		// Distribute and receive mail
+		city.distributeMail();
 		
 		// Send a random number of letters
 		final int numberOfMails = random.nextInt(10) + 1; // at least one letter a day, and max 10
@@ -77,11 +82,40 @@ public class Main {
 			// Send the letter
 			sender.postMail(mail);
 		}
+		
+		printer.println("*******************************************************");
+		printer.println();
+		printer.flush();
 	}
 	
 	public static void main(String [] args) {
-		// Create city and add inhabitants
-		City city = new City("ChocoLicorneCity");
-		city.addInhabitant(createInhabitants(100, city));
+		try {
+			System.out.println("TA MÈRE");
+			int nbDays = 6;
+			if(args.length > 0) {
+				try {
+					nbDays = Integer.parseInt(args[0]);
+				}
+				catch(NumberFormatException nfExc) {
+					new PrintWriter(System.err)
+						.printf("Invalid integer passed as argument, using default value (%d) as number of days...",
+								nbDays);
+				}
+			}
+			
+			// Create city and add inhabitants
+			City city = new City("ChocoLicorneCity", new UIConsole(printer));
+			printer.println("Creating " + city.getName());
+			city.addInhabitant(createInhabitants(100, city));
+			printer.println("Creating 100 inhabitants");
+			
+			// Launch simulation for nbDays days
+			for (int i = 1; i <= nbDays; i++) {
+				simulateOneDay(i, city);
+			}
+		}
+		finally {
+			printer.close();
+		}
 	}
 }

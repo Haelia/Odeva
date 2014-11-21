@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
+import src.sarahwissocq.armandbour.yougotmail.ui.UIListener;
 
 /**
  * The City class represents a city containing several {@link Inhabitant}s, and managing
@@ -23,10 +24,17 @@ public class City {
 	/** The mailbox containing all mail ready to be sent at the next call of .*/
 	private final List<Mail<?>> mailbox;
 	
+	private final UIListener listener;
+	
 	public City(String name) {
+		this(name, null);
+	}
+	
+	public City(String name, UIListener listener) {
 		this.name = name;
 		this.inhabitants = new ArrayList<Inhabitant>();
 		this.mailbox = new ArrayList<Mail<?>>();
+		this.listener = listener;
 	}
 	
 	/**
@@ -120,5 +128,13 @@ public class City {
 	 */
 	public String getName() {
 		return name;
+	}
+	
+	/**
+	 * Gets the event listener associated with the City.
+	 * @return The event listener associated.
+	 */
+	public UIListener getListener() {
+		return listener;
 	}
 }

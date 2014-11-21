@@ -1,6 +1,7 @@
 package src.sarahwissocq.armandbour.yougotmail.models;
 
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
+import src.sarahwissocq.armandbour.yougotmail.ui.UIListener;
 
 /**
  * Represent the inhabitant in the city.
@@ -27,7 +28,7 @@ public class Inhabitant {
 	public Inhabitant(String name, City city){
 		this.name = name;
 		this.city = city;
-		this.bankAccount = new BankAccount(1000);
+		this.bankAccount = new BankAccount(1000, this);
 	}
 	
 	/**
@@ -36,6 +37,11 @@ public class Inhabitant {
 	 * @param l letter the inhabitant received
 	 */
 	public void receiveMail(Mail<?> l){
+		// Notice ui
+		UIListener listener = this.city.getListener();
+		if(listener != null)
+			listener.onReceivingMail(l);
+		
 		l.action();
 	}
 	
@@ -44,6 +50,11 @@ public class Inhabitant {
 	 * @param l the letter that the inhabitant wants to post.
 	 */
 	public void postMail(Mail<?> l){
+		// Notice ui
+		UIListener listener = this.city.getListener();
+		if(listener != null)
+			this.city.getListener().onPostingMail(l);
+		
 		this.bankAccount.withdraw(l.getCost());
 		this.city.post(l);
 	}
@@ -100,5 +111,8 @@ public class Inhabitant {
 		return true;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return this.name;
+	}
 }

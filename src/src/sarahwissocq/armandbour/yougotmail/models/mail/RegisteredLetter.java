@@ -23,4 +23,9 @@ public class RegisteredLetter extends DecorativeLetter {
 	public float getCost() {
 		return (this.content.getCost() + 15);
 	}
+	
+	@Override
+	public String toString() {
+		return "a registered letter whose content is " + this.content.toString();
+	}
 }

@@ -23,7 +23,10 @@ public class SimpleLetter extends Letter<Text> {
 	@Override
 	public void action() {
 		this.content.get();
-
 	}
 
+	@Override
+	public String toString() {
+		return "a simple letter whose content is " + this.content.toString();
+	}
 }

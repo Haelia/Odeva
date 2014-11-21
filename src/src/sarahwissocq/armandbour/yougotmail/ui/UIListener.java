@@ -10,7 +10,7 @@ import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
  * @author Sarah WISSOCQ
  *
  */
-public interface NoticeUI {
+public interface UIListener {
 
 	/**
 	 * Method called when an {@link Inhabitant} posts a piece of {@link Mail}.
@@ -26,15 +26,17 @@ public interface NoticeUI {
 	
 	/**
 	 * Method called when a {@link BankAccount} is being debited a certain amount.
-	 * @param amount The debited amount.
+	 * @param owner The owner of the account.
 	 * @param account The account being debited.
+	 * @param amount The debited amount.
 	 */
-	void onDebitingBankAccount(int amount, BankAccount account);
+	void onDebitingBankAccount(Inhabitant owner, BankAccount account, float amount);
 	
 	/**
 	 * Method called when a {@link BankAccount} is being credited a certain amount.
+	 * @param owner The owner of the account.
 	 * @param amount The credited amount.
 	 * @param account The account being credited.
 	 */
-	void onCreditingBankAccount(int amount, BankAccount account);
+	void onCreditingBankAccount(Inhabitant owner, BankAccount account, float amount);
 }

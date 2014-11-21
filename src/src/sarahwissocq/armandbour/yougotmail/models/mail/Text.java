@@ -20,4 +20,8 @@ public class Text implements Content {
 		return this.text;
 	}
 
+	@Override
+	public String toString() {
+		return "a text content (" + this.text + ")";
+	}
 }
