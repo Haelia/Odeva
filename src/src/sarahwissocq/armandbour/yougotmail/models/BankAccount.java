@@ -2,6 +2,7 @@ package src.sarahwissocq.armandbour.yougotmail.models;
 
 import src.sarahwissocq.armandbour.yougotmail.ui.UIListener;
 
+
 /**
  * The BankAccount class represent the bank account of an inhabitant.
  * 

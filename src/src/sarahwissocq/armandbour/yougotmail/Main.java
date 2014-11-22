@@ -90,7 +90,6 @@ public class Main {
 	
 	public static void main(String [] args) {
 		try {
-			System.out.println("TA MÈRE");
 			int nbDays = 6;
 			if(args.length > 0) {
 				try {
