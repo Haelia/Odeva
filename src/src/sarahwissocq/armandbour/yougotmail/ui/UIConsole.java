@@ -28,13 +28,13 @@ public class UIConsole implements UIListener {
 	
 	@Override
 	public void onPostingMail(Mail<?> mail) {
-		this.printer.printf("-> %s posts %s to %s for a cost of %4.2f euro.%n",
+		this.printer.printf("<- %s posts %s to %s for a cost of %4.2f euro.%n",
 				mail.getSender(), mail, mail.getReceiver(), mail.getCost());
 	}
 
 	@Override
 	public void onReceivingMail(Mail<?> mail) {
-		this.printer.printf("<- %s receives %s from %s.%n",
+		this.printer.printf("-> %s receives %s from %s.%n",
 				mail.getSender(), mail, mail.getReceiver());
 	}
 

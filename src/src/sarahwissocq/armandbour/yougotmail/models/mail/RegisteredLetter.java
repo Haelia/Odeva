@@ -15,6 +15,7 @@ public class RegisteredLetter extends DecorativeLetter {
 
 	@Override
 	public void action() {
+		super.action();
 		this.receiver.postMail(new AcknowledgmentOfReceipt(this.receiver,
 				this.sender));
 	}

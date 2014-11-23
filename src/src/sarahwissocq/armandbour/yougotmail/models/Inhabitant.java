@@ -23,7 +23,6 @@ public class Inhabitant {
 	 * Constructor for the class Inhabitant.
 	 * @param name The name of the inhabitant.
 	 * @param city The city of the inhabitant.
-	 * @param bankAccount The bank account of the inhabitant.
 	 */
 	public Inhabitant(String name, City city){
 		this.name = name;

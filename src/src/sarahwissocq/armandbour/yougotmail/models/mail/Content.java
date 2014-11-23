@@ -6,7 +6,6 @@ package src.sarahwissocq.armandbour.yougotmail.models.mail;
  * @author Armand BOUR
  * @author Sarah WISSOCQ
  *
- * @param <T> The type of the object contained in Content.
  */
 public interface Content {
 

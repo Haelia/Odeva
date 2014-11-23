@@ -5,6 +5,7 @@ import java.util.Random;
 
 import src.sarahwissocq.armandbour.yougotmail.models.City;
 import src.sarahwissocq.armandbour.yougotmail.models.Inhabitant;
+import src.sarahwissocq.armandbour.yougotmail.models.mail.Letter;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Mail;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.Money;
 import src.sarahwissocq.armandbour.yougotmail.models.mail.PromissoryNote;
@@ -49,6 +50,25 @@ public class Main {
 		return city.getInhabitant(random.nextInt(nbInhabitants));
 	}
 	
+	public static Letter<?> generateRandomLetter(Inhabitant sender, Inhabitant receiver) {
+		Letter<?> mail = null;
+		switch(random.nextInt(8)) {
+			case 0: case 1: case 2:
+				mail = new SimpleLetter(sender, receiver, new Text("blah blah blah mr. freeman"));
+				break;
+			case 3: case 4: case 5:
+				mail = new PromissoryNote(sender, receiver, new Money(random.nextFloat() * 50));
+				break;
+			case 6:
+				mail = new RegisteredLetter(generateRandomLetter(sender, receiver));
+				break;
+			case 7:
+				mail = new UrgentLetter(generateRandomLetter(sender, receiver));
+				break;
+		}
+		return mail;
+	}
+
 	public static void simulateOneDay(int day, City city) {
 		printer.printf("************************ Day %d ************************\n", day);
 		
@@ -57,27 +77,13 @@ public class Main {
 		
 		// Send a random number of letters
 		final int numberOfMails = random.nextInt(10) + 1; // at least one letter a day, and max 10
-		final Text content= new Text("blah blah blah mr. freeman");
 		for(int i = 0; i < numberOfMails; i++) {
 			// Generate a random type of mail, and random sender and receiver
 			Mail<?> mail = null;
 			Inhabitant sender = getRandomInhabitant(city),
 					   receiver = getRandomInhabitant(city);
 			
-			switch(random.nextInt(4)) {
-				case 0:
-					mail = new SimpleLetter(sender, receiver, content);
-					break;
-				case 1:
-					mail = new PromissoryNote(sender, receiver, new Money(random.nextFloat() * 50));
-					break;
-				case 2:
-					mail = new RegisteredLetter(new SimpleLetter(sender, receiver, content));
-					break;
-				case 3:
-					mail = new UrgentLetter(new SimpleLetter(sender, receiver, content));
-					break;
-			}
+			mail = generateRandomLetter(sender, receiver);
 			
 			// Send the letter
 			sender.postMail(mail);
@@ -87,7 +93,7 @@ public class Main {
 		printer.println();
 		printer.flush();
 	}
-	
+
 	public static void main(String [] args) {
 		try {
 			int nbDays = 6;
@@ -114,6 +120,7 @@ public class Main {
 			}
 		}
 		finally {
+			// Flush and close the printer
 			printer.close();
 		}
 	}
