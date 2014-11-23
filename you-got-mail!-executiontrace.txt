@@ -1,0 +1,98 @@
+Creating ChocoLicorneCity
+Creating 100 inhabitants
+
+************************ Day 1 ************************
+-> Inhabitant-0084 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0039 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0084's account whose balance is now 984,00 euros.
+*******************************************************
+
+************************ Day 2 ************************
+<- Inhabitant-0084 receives a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0039.
+-> Inhabitant-0039 posts an ackowledgement of receipt whose content is a text content (Letter received) to Inhabitant-0084 for a cost of 0,00 euro.
+	- 0,00 euros are debited from Inhabitant-0039's account whose balance is now 1000,00 euros.
+-> Inhabitant-0013 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0035 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0013's account whose balance is now 984,00 euros.
+*******************************************************
+
+************************ Day 3 ************************
+<- Inhabitant-0039 receives an ackowledgement of receipt whose content is a text content (Letter received) from Inhabitant-0084.
+<- Inhabitant-0013 receives a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0035.
+-> Inhabitant-0035 posts an ackowledgement of receipt whose content is a text content (Letter received) to Inhabitant-0013 for a cost of 0,00 euro.
+	- 0,00 euros are debited from Inhabitant-0035's account whose balance is now 1000,00 euros.
+-> Inhabitant-0068 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0095 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0068's account whose balance is now 999,00 euros.
+-> Inhabitant-0029 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0034 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0029's account whose balance is now 984,00 euros.
+-> Inhabitant-0088 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0012 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0088's account whose balance is now 999,00 euros.
+-> Inhabitant-0073 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0096 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0073's account whose balance is now 984,00 euros.
+-> Inhabitant-0055 posts an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0011 for a cost of 2,00 euro.
+	- 2,00 euros are debited from Inhabitant-0055's account whose balance is now 998,00 euros.
+-> Inhabitant-0078 posts an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0072 for a cost of 2,00 euro.
+	- 2,00 euros are debited from Inhabitant-0078's account whose balance is now 998,00 euros.
+*******************************************************
+
+************************ Day 4 ************************
+<- Inhabitant-0035 receives an ackowledgement of receipt whose content is a text content (Letter received) from Inhabitant-0013.
+<- Inhabitant-0068 receives a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0095.
+<- Inhabitant-0029 receives a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0034.
+-> Inhabitant-0034 posts an ackowledgement of receipt whose content is a text content (Letter received) to Inhabitant-0029 for a cost of 0,00 euro.
+	- 0,00 euros are debited from Inhabitant-0034's account whose balance is now 1000,00 euros.
+<- Inhabitant-0088 receives a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0012.
+<- Inhabitant-0073 receives a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0096.
+-> Inhabitant-0096 posts an ackowledgement of receipt whose content is a text content (Letter received) to Inhabitant-0073 for a cost of 0,00 euro.
+	- 0,00 euros are debited from Inhabitant-0096's account whose balance is now 1000,00 euros.
+<- Inhabitant-0055 receives an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0011.
+<- Inhabitant-0078 receives an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0072.
+-> Inhabitant-0044 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0020 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0044's account whose balance is now 999,00 euros.
+-> Inhabitant-0052 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0089 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0052's account whose balance is now 984,00 euros.
+-> Inhabitant-0061 posts a promissory note whose content is a money content (5.388898) to Inhabitant-0066 for a cost of 1,05 euro.
+	- 1,05 euros are debited from Inhabitant-0061's account whose balance is now 998,95 euros.
+*******************************************************
+
+************************ Day 5 ************************
+<- Inhabitant-0034 receives an ackowledgement of receipt whose content is a text content (Letter received) from Inhabitant-0029.
+<- Inhabitant-0096 receives an ackowledgement of receipt whose content is a text content (Letter received) from Inhabitant-0073.
+<- Inhabitant-0044 receives a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0020.
+<- Inhabitant-0052 receives a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0089.
+-> Inhabitant-0089 posts an ackowledgement of receipt whose content is a text content (Letter received) to Inhabitant-0052 for a cost of 0,00 euro.
+	- 0,00 euros are debited from Inhabitant-0089's account whose balance is now 1000,00 euros.
+<- Inhabitant-0061 receives a promissory note whose content is a money content (5.388898) from Inhabitant-0066.
+	- 5,39 euros are debited from Inhabitant-0061's account whose balance is now 993,56 euros.
+	+ 5,39 euros are credited from Inhabitant-0066's account whose balance is now 1005,39 euros.
+-> Inhabitant-0061 posts a thanks letter which isa simple letter whose content is a text content (Thanks for a promissory note whose content is a money content (5.388898)) to Inhabitant-0066 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0066's account whose balance is now 1004,39 euros.
+-> Inhabitant-0090 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0083 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0090's account whose balance is now 999,00 euros.
+-> Inhabitant-0020 posts a promissory note whose content is a money content (35.467533) to Inhabitant-0048 for a cost of 1,35 euro.
+	- 1,35 euros are debited from Inhabitant-0020's account whose balance is now 998,65 euros.
+-> Inhabitant-0085 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0072 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0085's account whose balance is now 999,00 euros.
+-> Inhabitant-0079 posts an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0070 for a cost of 2,00 euro.
+	- 2,00 euros are debited from Inhabitant-0079's account whose balance is now 998,00 euros.
+*******************************************************
+
+************************ Day 6 ************************
+<- Inhabitant-0089 receives an ackowledgement of receipt whose content is a text content (Letter received) from Inhabitant-0052.
+<- Inhabitant-0061 receives a thanks letter which isa simple letter whose content is a text content (Thanks for a promissory note whose content is a money content (5.388898)) from Inhabitant-0066.
+<- Inhabitant-0090 receives a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0083.
+<- Inhabitant-0020 receives a promissory note whose content is a money content (35.467533) from Inhabitant-0048.
+	- 35,47 euros are debited from Inhabitant-0020's account whose balance is now 963,18 euros.
+	+ 35,47 euros are credited from Inhabitant-0048's account whose balance is now 1035,47 euros.
+-> Inhabitant-0020 posts a thanks letter which isa simple letter whose content is a text content (Thanks for a promissory note whose content is a money content (35.467533)) to Inhabitant-0048 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0048's account whose balance is now 1034,47 euros.
+<- Inhabitant-0085 receives a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0072.
+<- Inhabitant-0079 receives an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) from Inhabitant-0070.
+-> Inhabitant-0022 posts a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0024 for a cost of 1,00 euro.
+	- 1,00 euro is debited from Inhabitant-0022's account whose balance is now 999,00 euros.
+-> Inhabitant-0047 posts an urgent letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0032 for a cost of 2,00 euro.
+	- 2,00 euros are debited from Inhabitant-0047's account whose balance is now 998,00 euros.
+-> Inhabitant-0074 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0081 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0074's account whose balance is now 984,00 euros.
+-> Inhabitant-0096 posts a registered letter whose content is a simple letter whose content is a text content (blah blah blah mr. freeman) to Inhabitant-0044 for a cost of 16,00 euro.
+	- 16,00 euros are debited from Inhabitant-0096's account whose balance is now 984,00 euros.
+*******************************************************
+

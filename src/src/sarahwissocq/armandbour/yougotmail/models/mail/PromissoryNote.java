@@ -25,9 +25,7 @@ public class PromissoryNote extends Letter<Money> {
 	public void action() {
 		this.sender.getBankAccount().withdraw(this.getContent().get());
 		this.receiver.getBankAccount().credit(this.getContent().get());
-		Text msg = new Text("Thank You !");
-		SimpleLetter l = new SimpleLetter(this.receiver, this.sender, msg);
-		this.receiver.postMail(l);
+		this.receiver.postMail(new ThanksLetter(this.sender, this.receiver, this));
 	}
 
 	@Override

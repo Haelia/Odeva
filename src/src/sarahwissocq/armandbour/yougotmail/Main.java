@@ -106,7 +106,7 @@ public class Main {
 			City city = new City("ChocoLicorneCity", new UIConsole(printer));
 			printer.println("Creating " + city.getName());
 			city.addInhabitant(createInhabitants(100, city));
-			printer.println("Creating 100 inhabitants");
+			printer.println("Creating 100 inhabitants\n");
 			
 			// Launch simulation for nbDays days
 			for (int i = 1; i <= nbDays; i++) {

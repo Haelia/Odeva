@@ -27,11 +27,11 @@ public class BankAccount {
 	 * @param f The amount
 	 */
 	public void credit(float f) {
+		this.amount = this.amount + f;
+		
 		UIListener listener = this.owner.getCity().getListener();
 		if(listener != null)
 			listener.onCreditingBankAccount(this.owner, this, f);
-		
-		this.amount = this.amount + f;
 	}
 
 	/**
@@ -39,11 +39,11 @@ public class BankAccount {
 	 * @param f The amount
 	 */
 	public void withdraw(float f) {
+		this.amount = this.amount - f;
+		
 		UIListener listener = this.owner.getCity().getListener();
 		if(listener != null)
 			listener.onDebitingBankAccount(this.owner, this, f);
-		
-		this.amount = this.amount - f;
 	}
 
 	/**
